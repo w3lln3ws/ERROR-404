@@ -5,8 +5,8 @@ Enum cash_flow_type {
 
 Table customer {
     customer_id int [pk, increment]
-    name varchar(100) [not null]
-    email varchar(100) [unique, not null]
+    name varchar(200) [not null]
+    email varchar(200) [unique, not null]
     phone varchar(20)
     password_hash varchar(255) [not null]
     created_at timestamp [default: `CURRENT_TIMESTAMP`]
@@ -23,14 +23,14 @@ Table address {
 
 Table category {
     category_id int [pk, increment]
-    name varchar(50) [not null]
+    name varchar(200) [not null]
     description text
 }
 
 Table product {
     product_id int [pk, increment]
     category_id int [not null]
-    name varchar(100) [not null]
+    name varchar(200) [not null]
     price decimal(12, 2) [not null]
     stock int [not null, default: 0]
 }
